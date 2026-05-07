@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background: #000;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide number input spinners */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Smooth tap highlight for mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@layer utilities {
+  .swish-gradient {
+    background: linear-gradient(135deg, #3FA9F5 0%, #2B8FE0 100%);
+  }
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
